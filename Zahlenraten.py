@@ -44,5 +44,5 @@ Bitte geben Sie bitte "Ja" oder "Nein" ein.
 
     else:
         nochmal()
-Wilkommen()
+Willkommen()
 Ratespiel()
