@@ -1,4 +1,11 @@
 import random
+
+def Willkommen():
+    print('''
+Willkommen! Viel Spaß beim rechnen.
+-Sofie Preißinger
+''')
+
 def Ratespiel():
     secretNumber = random.randint(1, 20)
     print('Erraten Sie eine Zahl zwischen 1 und 20 mit maximal 5 Versuchen')
@@ -37,5 +44,5 @@ Bitte geben Sie bitte "Ja" oder "Nein" ein.
 
     else:
         nochmal()
-
+Wilkommen()
 Ratespiel()
