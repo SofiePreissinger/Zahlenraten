@@ -7,3 +7,6 @@ den Code der oben gelisteten Taschenrechner Python Datei direkt downloaded und a
 Freundliche Grüße
 
 Sofie Preißinger
+
+
+1.1 Crash nach eingabe eines Buchstaben behoben.
