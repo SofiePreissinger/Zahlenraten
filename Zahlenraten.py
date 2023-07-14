@@ -1,3 +1,4 @@
+
 import random
 
 def Willkommen():
@@ -11,6 +12,8 @@ def Ratespiel():
     secretNumber = random.randint(1, 20)
     print('Erraten Sie eine Zahl zwischen 1 und 20 mit maximal 5 Versuchen')
 
+    guess = None
+
     for guessesTaken in range (1, 6):
         print('Erraten Sie die Zahl')
         try:
@@ -18,6 +21,7 @@ def Ratespiel():
 
         except ValueError:
             print ('Ungültige Eingabe. Bitte geben Sie eine Zahl zwischen 1 und 20 ein.')
+
             continue
 
         if guess < secretNumber:
@@ -35,20 +39,22 @@ def Ratespiel():
     nochmal()
 
 def nochmal():
-
-    nochmalspielen = input('''
+    while True:
+        nochmalspielen = input('''
 Wollen Sie es nochmal versuchen ?
 Bitte geben Sie "Ja" oder "Nein" ein.
 ''')
 
-    if nochmalspielen == 'Ja':
-        Ratespiel()
+        if nochmalspielen.lower() == 'ja':
+            Ratespiel()
+            break
 
-    elif nochmalspielen == 'Nein':
-        print ('Spiel beendet.')
+        elif nochmalspielen.lower() == 'nein':
+            print ('Spiel beendet.')
+            break
 
-    else:
-        nochmal()
+        else:
+            print('Ungültige Eingabe. Bitte geben sie "Ja" oder "Nein" ein.')
 
 Willkommen()
 Ratespiel()
